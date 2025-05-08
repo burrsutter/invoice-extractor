@@ -51,48 +51,6 @@ Default
 user: minioadmin
 password: minioadmin
 
-### Llama Stack
-
-
-```bash
-ollama run llama3.1:8b-instruct-fp16 --keepalive 60m
-```
-
-```bash
-export INFERENCE_MODEL="meta-llama/Llama-3.1-8B-Instruct"
-export LLAMA_STACK_PORT=8321
-```
-
-podman or docker
-
-```bash
-podman pull docker.io/llamastack/distribution-ollama
-```
-
-```bash
-mkdir -p ~/.llama_stack
-```
-
-### Reset
-
-```bash
-rm -rf ~/.llama_stack
-mkdir -p ~/.llama_stack
-```
-
-```bash
-podman run -it \
-  -p $LLAMA_STACK_PORT:$LLAMA_STACK_PORT \
-  -v ~/.llama:/root/.llama_stack \
-  --env INFERENCE_MODEL=$INFERENCE_MODEL \
-  --env OLLAMA_URL=http://host.containers.internal:11434 \
-  llamastack/distribution-ollama \
-  --port $LLAMA_STACK_PORT
-```
-
-```bash
-podman ps
-```
 
 ```bash
 python3.11 -m venv .venv
