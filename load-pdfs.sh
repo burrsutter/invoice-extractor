@@ -1,0 +1,1 @@
+mc cp --recursive ./invoices/ myminio/invoices/source/
