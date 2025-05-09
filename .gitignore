@@ -1,4 +1,55 @@
+# Project specific
 invoices/
-.venv/
+*.png
+*.pdf
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
 .env
+.venv/
+env/
+venv/
+ENV/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache/
+coverage.xml
+*.cover
+
+# Logs
+*.log
+logs/
+
+# OS specific files
 .DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+tmp/
+temp/
+
+# Helm
+helm/**/charts/

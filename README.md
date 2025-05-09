@@ -96,6 +96,12 @@ mc cp myminio/invoices/source/invoice_2.pdf myminio/invoices/intake/
 mc cp myminio/invoices/json/invoice_2.json .
 ```
 
+Push all the files
+
+```bash
+mc cp --recursive myminio/invoices/source/ myminio/invoices/intake/
+```
+
 ### Docker Container
 
 Build the Docker image:
